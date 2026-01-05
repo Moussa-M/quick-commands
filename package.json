@@ -1,0 +1,54 @@
+{
+  "name": "quick-commands",
+  "displayName": "Quick Commands",
+  "description": "A collection of useful VS Code commands",
+  "version": "0.0.1",
+  "publisher": "apertacodex",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apertacodex/quick-commands.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apertacodex/quick-commands/issues"
+  },
+  "homepage": "https://github.com/apertacodex/quick-commands#readme",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [],
+  "activationEvents": [
+    "onCommand:extension.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/node": "^22.x",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.0",
+    "@vscode/vsce": "^3.2.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
